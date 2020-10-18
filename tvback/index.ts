@@ -5,18 +5,15 @@ import {
 import router from './routes/index.routes.ts'
  const PORT = 3031; 
 
-
-
  const app = new Application();
 
  
-
 app.use(router.routes());
 app.use(router.allowedMethods()); //permitir todos lo metodos
 
-
-app.listen({port: PORT}); 
  console.log(`vivo en el puero 3031`); 
+await app.listen({port: PORT}); 
+
 
 
 

@@ -10,6 +10,7 @@ rou.get ('/',({request, response})=>{
     response.body="holi"; 
  });
 
- rou.get ('/u',CTR.getUsers); 
-
+ rou.get ('/us',CTR.getUsers); 
+ rou.post ('/c',CTR.createUser); 
+ rou.get ('/u/:id',CTR.getUser); 
  export default rou; 
