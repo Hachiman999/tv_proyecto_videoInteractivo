@@ -1,9 +1,11 @@
-import { 
+
+/*import { 
     Application
 } from "https://deno.land/x/oak/mod.ts";
 
 import router from './routes/index.routes.ts'
- const PORT = 3031; 
+
+import env from './env.ts'; 
 
  const app = new Application();
 
@@ -11,9 +13,14 @@ import router from './routes/index.routes.ts'
 app.use(router.routes());
 app.use(router.allowedMethods()); //permitir todos lo metodos
 
- console.log(`vivo en el puero 3031`); 
-await app.listen({port: PORT}); 
+ console.log(`vivo en el puero ${env.port}`); 
+await app.listen({port: env.port}); 
+*/
 
+import { APIserver  } from "./src/APIserver.ts"; 
+import env from './env.ts';
+const server = new APIserver({hostname: env.hostname, port: env.port});
+server.starServer();
 
 
 
