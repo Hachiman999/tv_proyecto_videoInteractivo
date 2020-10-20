@@ -1,16 +1,16 @@
 # tvfront
 
-## Project setup
+## Descargar las librerias necesarias
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Copilar para el modo desarrollador 
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### Copilar para el producto final
 ```
 yarn build
 ```
