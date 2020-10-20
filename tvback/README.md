@@ -5,6 +5,7 @@
 ### Lista de programas necesarios
 | Nombres | URL |
 | ------ | ------ |
+|Chocolatey| [https://chocolatey.org/](https://chocolatey.org/install)|
 | DENO | [https://deno.land/](https://deno.land/)|
 | GitHub | [https://desktop.github.com/](https://desktop.github.com/) |
 |Visual Code|[https://code.visualstudio.com/](https://code.visualstudio.com/) |
