@@ -3,7 +3,8 @@ import {
     Router,
     Context,
     Status,
-    STATUS_TEXT
+    STATUS_TEXT,
+  //  oakCors
 } from "https://deno.land/x/oak/mod.ts";
 
 import {
@@ -62,6 +63,7 @@ export class APIserver {
     private initLogger() {
         this.app.use(async (context, next) => {
             const start: number = performance.now(); //float que da el tiempo en milisegundos
+            //context.response.headers.set('Access-Control-Allow-Origin:', '*')
             await next();
             const duration: string = this.highPrecisionToHumanReadable(performance.now() - start);
             const status = STATUS_TEXT.get(context.response.status || Status.OK) || "OK";
@@ -72,9 +74,9 @@ export class APIserver {
     private initEndPoints() {
         this.routes.get('/us', async (context) => {
             let result: UserManagerResponse = await this.userManager.getUsers();
+
             context.response.status = this.GetHTTPStatus(result.status);
             context.response.body = result.value;
-
         });
 
         this.routes.post('/cu', async (context) => {
@@ -88,6 +90,7 @@ export class APIserver {
                 context.response.body = result.value;
             }
         });
+       // this.app.use(oakCors({ origin: `http://${env.hostname}:${env.portorigin}`, optionsSuccessStatus: 200 }));
         this.app.use(this.routes.routes());
         this.app.use(this.routes.allowedMethods());
     }

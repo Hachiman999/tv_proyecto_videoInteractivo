@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>{{ titulo }}</h1>
-    <form action="">
+    <form action="" @submit.prevent = "comentar(usuario)">
       nombre
       <input type="text" name="" id="" v-model="usuario.name" />
 
@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import {mapActions} from 'vuex'
+
 export default {
   name: "EnvioData",
   props: {
@@ -32,5 +34,8 @@ export default {
       },
     };
   },
+  methods:{
+    ...mapActions(['comentar'])
+  }
 };
 </script>
