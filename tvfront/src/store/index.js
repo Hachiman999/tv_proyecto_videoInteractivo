@@ -1,29 +1,47 @@
-import { createStore } from 'vuex'; 
-import env from '../env/api'; 
+import { createStore } from 'vuex';
+import env from '../env/api';
 export default createStore({
   state: {
-    comentarios:[]
+    comentarios: []
   },
   mutations: {
-    setComentario(state, payload){
-      state.comentarios = payload; 
+    setComentario (state, payload) {
+      state.comentarios = payload;
     }
   },
   actions: {
-   async comentar({commit},usuario){
-      console.log(usuario); 
-      try{
-        const res = await fetch(`${env.URL}${env.COMENTAR}`,{
-          mode: 'no-cors', 
-          method:'POST',
-          headers:{
-            'Content-Type' : 'application/json'
+    async comentar ({ commit }, usuario) {
+      const { name, comentario } = usuario;
+     console.log(usuario);
+      try {
+        const res = await fetch(`${env.URL}${env.COMENTAR}`, {
+          method: 'POST',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json; charset=utf-8',
+            'Access-Control-Allow-Origin': '*'
           },
-          body:JSON.stringify(usuario) 
+          redirect: 'follow',
+          body: JSON.stringify({ name, comentario })
         });
-        const respuesta = await res.json(); 
-        console.log(respuesta); 
-      }catch(error){
+        const respuesta = await res.json();
+        console.log(respuesta);
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    async obtenerComentarios(){
+      try {
+        const res = await fetch(`${env.URL}${env.COMENTARIOS}`, {
+          method: 'GET',
+          mode: 'cors',
+          headers: {
+            'Access-Control-Allow-Origin': '*'
+          }
+        });
+        const respuesta = await res.json();
+        console.log(respuesta);
+      } catch (error) {
         console.log(error)
       }
     }

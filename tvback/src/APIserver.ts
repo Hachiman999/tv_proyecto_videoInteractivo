@@ -63,15 +63,19 @@ export class APIserver {
     private initLogger() {
         this.app.use(async (context, next) => {
             const start: number = performance.now(); //float que da el tiempo en milisegundos
-            //context.response.headers.set('Access-Control-Allow-Origin:', '*')
+            context.response.headers.set('Access-Control-Allow-Origin', '*')
             await next();
             const duration: string = this.highPrecisionToHumanReadable(performance.now() - start);
             const status = STATUS_TEXT.get(context.response.status || Status.OK) || "OK";
-            console.log(bold(this.getFormatedDatetime()) + " " + bold(green(context.request.method)) + " " + bold(cyan(context.request.url.pathname)) + " status:" + bold(status));
+            console.log(bold(this.getFormatedDatetime()) + " " + bold(green(context.request.method)) + " " + bold(cyan(context.request.url.pathname)) + " status:" + bold(status) + " req: " + context.request );
         });
     }
 
     private initEndPoints() {
+        this.routes.get('/', async (context) => {
+            context.response.body = "Hola a todos soy la api para tv "; 
+        });
+
         this.routes.get('/us', async (context) => {
             let result: UserManagerResponse = await this.userManager.getUsers();
 
@@ -80,6 +84,7 @@ export class APIserver {
         });
 
         this.routes.post('/cu', async (context) => {
+            
             if (!context.request.hasBody) {
                 context.response.status = Status.BadRequest;
                 context.response.body = "Cuerpo invalido";

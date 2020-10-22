@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
+    <Suspense>
     <HelloWorld titulo="Bienvenido a proyecto de video con vue y deno"/>
+    </Suspense>
   </div>
 </template>
 

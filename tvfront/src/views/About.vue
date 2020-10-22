@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>{{ titulo }}</h1>
-    <form action="" @submit.prevent = "comentar(usuario)">
+    <form action="POST" @submit.prevent = "comentar(usuario)">
       nombre
       <input type="text" name="" id="" v-model="usuario.name" />
 
