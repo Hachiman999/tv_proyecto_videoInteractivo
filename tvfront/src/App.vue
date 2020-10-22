@@ -1,5 +1,6 @@
 <template>
   <div id="nav">
+    
     <router-link to="/">Comentarios</router-link> |
     <router-link to="/about">Comentar</router-link>
   </div>
