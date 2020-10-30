@@ -64,6 +64,7 @@ export class APIserver {
         this.app.use(async (context, next) => {
             const start: number = performance.now(); //float que da el tiempo en milisegundos
             context.response.headers.set('Access-Control-Allow-Origin', '*')
+            context.response.headers.set('Content-Type', 'application/json')
             await next();
             const duration: string = this.highPrecisionToHumanReadable(performance.now() - start);
             const status = STATUS_TEXT.get(context.response.status || Status.OK) || "OK";
