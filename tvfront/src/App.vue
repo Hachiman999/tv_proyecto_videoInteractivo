@@ -2,7 +2,8 @@
   <div id="nav">
     
     <router-link to="/">Comentarios</router-link> |
-    <router-link to="/about">Comentar</router-link>
+    <router-link to="/about">Comentar</router-link> |
+    <router-link to="/interaccion">Interaccion</router-link>
   </div>
   <router-view/>
 </template>

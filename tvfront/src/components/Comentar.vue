@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>{{ titulo }}</h1>
-    <form action="POST" @submit.prevent="comentarDir(usuario)">
+    <form  @submit.prevent="comentarDir(usuario)">
       nombre
       <input type="text" name="" id="" v-model="usuario.name" />
 
@@ -37,23 +37,24 @@ export default {
   methods: {
     ...mapActions(["comentar"]),
   comentarDir: async function (usu) {
-    const {name, comentario }= usu; 
-    try {
-      const res = await fetch(`${env.URL}${env.COMENTAR}`, {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-          "Access-Control-Allow-Origin": "*",
-        },
-        redirect: "follow",
-        body: JSON.stringify({ name, comentario }),
-      });
-      const respuesta = await res.json();
-      console.log(respuesta);
-    } catch (error) {
-      console.log(error);
-    }
+    const urespu = await fetch(`${env.URL}u=0/n=${usu.name}/c=${usu.comentario}`, {
+          method: 'GET',
+          mode: 'no-cors',
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+               'Content-Type': 'application/json'
+          }
+        }); /*
+         const urespu = await fetch(`${env.URL}${env.COMENTAR}`, {
+          method: 'POST',
+          mode: 'cors',
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+               'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(usu) 
+        });*/
+    console.log(urespu); 
   }
   },
 };

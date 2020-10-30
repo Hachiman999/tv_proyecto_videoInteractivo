@@ -95,6 +95,17 @@ export class APIserver {
                 context.response.body = result.value;
             }
         });
+        this.routes.get('/u=:id/n=:Name/c=:Comment', async (req, res)=> {
+            console.log(req.params);
+            const {id , Name ,Comment } = req.params; 
+            const obj = {id:0, Name :Name, Comment : Comment } 
+            let user: User =obj ; 
+            let result: UserManagerResponse = await this.userManager.createUser(user);
+           console.log(res);
+            
+            console.log(result); 
+          });
+
        // this.app.use(oakCors({ origin: `http://${env.hostname}:${env.portorigin}`, optionsSuccessStatus: 200 }));
         this.app.use(this.routes.routes());
         this.app.use(this.routes.allowedMethods());
