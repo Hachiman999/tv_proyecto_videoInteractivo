@@ -17,7 +17,7 @@ const newUser = new user({
 });
 const userSaved = await newUser.save();
 //const usuarios = await user.find({});
-res.json("buena perro");
+res.json(req.body);
 });
 
 
