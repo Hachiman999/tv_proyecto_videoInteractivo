@@ -9,18 +9,23 @@ constructor(props){
     this.metodoq = this.metodoq.bind(this); 
     this.metodox = this.metodox.bind(this); 
     this.comportamientoVideo= this.comportamientoVideo.bind(this); 
+    this.eventoClic1 = this.eventoClic1.bind(this); 
 }
    
-componentDidMount() {
-           
+componentDidMount=()=> {
+  document.addEventListener("click", this.eventoClic1);
+  this.video = document.createElement('video');
+  this.video.src = video1; 
+  this.mount.appendChild(this.video); 
         this.comportamientoVideo(this.mount)
        
 
 }
+componentWillUnmount(){
+  document.removeEventListener("click", this.mouseEventsdown);
+}
 comportamientoVideo(body){
-    this.video = document.createElement('video');
-    this.video.src = video1; 
-    body.appendChild(this.video); 
+   
     var {video, tiempo}= this.state; 
    this.video.play(); 
     this.video.addEventListener("timeupdate",function(ev){
@@ -33,10 +38,7 @@ comportamientoVideo(body){
         btn1.appendChild(document.createTextNode("Aceptar"))
         body.appendChild( btn1); 
         
-     btn1.onClick=()=>{
-        console.log(video); 
-     }
-      
+   //  btn1.addEventListener("click",this.eventoClic1() , true); 
 		
         var btn2 = document.createElement("BUTTON");
         btn2.id = "boton2"
@@ -49,6 +51,10 @@ comportamientoVideo(body){
 
        },true);
   
+}
+
+eventoClic1(){
+console.log(this.video); 
 }
    
     metodoq(){

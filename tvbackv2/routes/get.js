@@ -20,7 +20,7 @@ rutas.get('/',(req,res)=>{
 rutas.get('/us',async (req,res)=>{
     let fecha= new Date(); 
     const dia =  fecha.getUTCDate(); 
-    const hora =  fecha.getUTCHours(); 
+    const hora =  fecha.getUTCHours()-5; 
     const minutos =  fecha.getUTCMinutes(); 
     const segundos = fecha.getUTCSeconds(); 
    console.log(chalk.cyan('dia: ') + dia+chalk.cyan(' hora: ')+hora+chalk.cyan(' minutos: ')+minutos+chalk.cyan(' segundos: ')+segundos );
