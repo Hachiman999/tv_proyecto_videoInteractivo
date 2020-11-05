@@ -9,53 +9,73 @@ constructor(props){
     this.metodoq = this.metodoq.bind(this); 
     this.metodox = this.metodox.bind(this); 
     this.comportamientoVideo= this.comportamientoVideo.bind(this); 
-    this.eventoClic1 = this.eventoClic1.bind(this); 
+  
 }
    
 componentDidMount=()=> {
-  document.addEventListener("click", this.eventoClic1);
+  var {src} = this.state; 
+
   this.video = document.createElement('video');
-  this.video.src = video1; 
+  this.video.src =src; 
+  this.video.controls=true; 
   this.mount.appendChild(this.video); 
         this.comportamientoVideo(this.mount)
        
 
 }
 componentWillUnmount(){
-  document.removeEventListener("click", this.mouseEventsdown);
+ 
 }
+
 comportamientoVideo(body){
    
-    var {video, tiempo}= this.state; 
+    var {video, tiempo,src}= this.state; 
    this.video.play(); 
-    this.video.addEventListener("timeupdate",function(ev){
-        tiempo = ev.target.currentTime;
-        if(tiempo >= 11 && video ===1){
-            ev.target.currentTime=8; 
-               // VARIABLES VIDEO 1
-        var btn1 = document.createElement("BUTTON");
-        btn1.id = "boton1"
-        btn1.appendChild(document.createTextNode("Aceptar"))
-        body.appendChild( btn1); 
-        
-   //  btn1.addEventListener("click",this.eventoClic1() , true); 
-		
-        var btn2 = document.createElement("BUTTON");
-        btn2.id = "boton2"
-        btn2.appendChild(document.createTextNode("rechazar"))
-        }
-       // console.log(tiempo)
-        if(tiempo >= 11 && video ===2){
-            ev.target.currentTime=8; 
-        }
+   var estadob = true; 
+    this.video.addEventListener("timeupdate",(ev)=>{
+      tiempo = ev.target.currentTime;
+      // console.log(ev)
+       if(tiempo >= ev.target.duration-3 && video ===1){
+           ev.target.currentTime=ev.target.duration-7; 
+           
+              // VARIABLES VIDEO 1
+       var btn1 = document.createElement("BUTTON");
+       btn1.id = "boton1"
+       btn1.appendChild(document.createTextNode("Aceptar"))
+       var btn2 = document.createElement("BUTTON");
+       btn2.id = "boton2"
+       btn2.appendChild(document.createTextNode("rechazar"))
+     if(estadob){
+       body.appendChild( btn1); body.appendChild( btn2); estadob= false; 
+     }
+       
+       
+    btn1.addEventListener("click",()=>{
+     video=2; 
+     src = video2; 
+     this.video.src = src;  this.video.play(); 
+    } , true); 
+   
+      
+       btn2.addEventListener("click",()=>{
+       
 
-       },true);
+        } , true); 
+       }
+  
+
+      // console.log(tiempo)
+       if(tiempo >= 11 && video ===2){
+           ev.target.currentTime=8; 
+          
+       }
+
+      
+    },true);
   
 }
 
-eventoClic1(){
-console.log(this.video); 
-}
+
    
     metodoq(){
        this.props.history.push('/us');
