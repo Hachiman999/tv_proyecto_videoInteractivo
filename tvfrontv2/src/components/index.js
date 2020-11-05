@@ -47,6 +47,7 @@ comportamientoVideo(body){
        btn2.appendChild(document.createTextNode("rechazar"))
      if(estadob){
        body.appendChild( btn1); body.appendChild( btn2); estadob= false; 
+     
      }
        
        
@@ -54,6 +55,7 @@ comportamientoVideo(body){
      video=2; 
      src = video2; 
      this.video.src = src;  this.video.play(); 
+      btn1.remove(btn1);btn2.remove(btn2);
     } , true); 
    
       
