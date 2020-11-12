@@ -176,6 +176,9 @@ class App extends Component {
           this.video.src = src;
           this.video.play();
         }
+        if (tiempo >= ev.target.duration - 0.5 && video === 10) {
+          this.props.history.push("/cu");
+        }
         //fin del evento de escuchar
       },
       true

@@ -11,14 +11,14 @@ class App extends Component {
     this.props.history.push("/ha");
   }
   rutahistoria2() {
-    this.props.history.push("/hs");
+    this.props.history.push("/hb");
   }
 
   render() {
     return (
       <div>
         <button onClick={this.rutahistoria1}>historia 1 </button>
-        <button onClick={this.rutahistoria1}>historia 2 </button>
+        <button onClick={this.rutahistoria2}>historia 2 </button>
       </div>
     );
   }
