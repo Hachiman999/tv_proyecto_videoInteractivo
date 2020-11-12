@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <img id="background-video" src={img} />
+        <img id="background-video" alt="some value" src={img} />
         <button onClick={this.metodoq}>ver articulos </button>
 
         <button onClick={this.metodox}>elegir historia</button>
