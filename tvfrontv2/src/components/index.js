@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//import video1 from "../assets/A1.mp4";
+import img from "../assets/fondo.GIF";
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +18,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <img id="background-video" src={img} />
         <button onClick={this.metodoq}>ver articulos </button>
 
         <button onClick={this.metodox}>elegir historia</button>
