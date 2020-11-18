@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './styles.css'; 
 
 class App extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class App extends Component {
   }
 
   metodoq() {
-    this.props.history.push("/");
+    this.props.history.push("/prueba");
   }
   metodox() {
     this.props.history.push("/hs");

@@ -8,6 +8,8 @@ import hs from "../pages/historias";
 import ha from "../pages/historiaA";
 import hb from "../pages/historiaB";
 import por from "../pages/index";
+import prueba from "../pages/prueba"
+
 class Main extends Component {
   render() {
     return (
@@ -20,6 +22,7 @@ class Main extends Component {
           <Route exact path="/hs" component={hs} />
           <Route exact path="/ha" component={ha} />
           <Route exact path="/hb" component={hb} />
+          <Route exact path="/prueba" component={prueba} />
         </Switch>
       </div>
     );
