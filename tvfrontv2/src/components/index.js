@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import img from "../assets/fondo.GIF";
-
+import './styles.css';
 class App extends Component {
   constructor(props) {
     super(props);
@@ -17,11 +17,17 @@ class App extends Component {
   }
   render () {
     return (
-      <div>
+      <div className="container_index">
         <img id="background-video" alt="some value" src={img} />
-        <button className="btn_articulos" onClick={this.metodoq}>ver articulos </button>
+        <div className="btn_historias">
+          <button onClick={this.metodox}>elegir historia</button>
+        </div>
+        <div className="btn_articulos">
+          <button onClick={this.metodoq}>ver articulos </button>
+        </div>
 
-        <button onClick={this.metodox}>elegir historia</button>
+
+
       </div>
     );
   }
