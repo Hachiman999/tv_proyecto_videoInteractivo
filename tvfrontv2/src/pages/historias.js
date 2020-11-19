@@ -12,24 +12,24 @@ class App extends Component {
     this.rutahistoria1 = this.rutahistoria1.bind(this);
   }
 
-  rutahistoria1() {
+  rutahistoria1 () {
     this.props.history.push("/ha");
   }
-  rutahistoria2() {
+  rutahistoria2 () {
     this.props.history.push("/hb");
   }
- 
 
-  render() {
+
+  render () {
     return (
       <div className="contenedor-btn">
         <button onClick={this.rutahistoria1} className="btn-historia1"  > <AiOutlinePlayCircle size='10rem' /> </button>
         <button onClick={this.rutahistoria2} className="btn-historia2" > <AiOutlinePlayCircle size='10rem' /> </button>
-       
+
         <div className="contenerdor-video" >
-        <video autoPlay loop playsInline muted src={ejem3} className="videof1" />
-        <video autoPlay loop playsInline muted src={ejem4} className="videof2" />
-        </div> 
+          <video autoPlay loop playsInline muted src={ejem3} className="videof1" />
+          <video autoPlay loop playsInline muted src={ejem4} className="videof2" />
+        </div>
       </div>
     );
   }

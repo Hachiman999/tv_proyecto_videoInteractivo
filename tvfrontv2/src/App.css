@@ -30,7 +30,7 @@
 #background-video {
   height: 100%;
   width: 100%;
-
+  display: block;
   position: absolute;
   z-index: -1000;
 }
@@ -58,4 +58,9 @@
   padding: 10px;
   font-size: 20px;
   border-radius: 8px;
+}
+.btn_articulos {
+  position: relative;
+  align-items: flex-end;
+  margin: 12em 0 0 auto;
 }

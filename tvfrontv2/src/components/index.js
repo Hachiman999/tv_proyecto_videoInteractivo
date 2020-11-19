@@ -9,17 +9,17 @@ class App extends Component {
     this.metodox = this.metodox.bind(this);
   }
 
-  metodoq() {
+  metodoq () {
     this.props.history.push("/");
   }
-  metodox() {
+  metodox () {
     this.props.history.push("/hs");
   }
-  render() {
+  render () {
     return (
       <div>
         <img id="background-video" alt="some value" src={img} />
-        <button onClick={this.metodoq}>ver articulos </button>
+        <button className="btn_articulos" onClick={this.metodoq}>ver articulos </button>
 
         <button onClick={this.metodox}>elegir historia</button>
       </div>
@@ -34,7 +34,7 @@ addEventListener("click", ()=>{}, false);
 */
 
 /*
-         ,--"""",--.__,---[],-------._         
+         ,--"""",--.__,---[],-------._
        ,"   __,'            \         \--""""""==;-
      ," _,-"  "/---.___     \       ___\   ,-'',"
     /,-'      / ;. ,.--'-.__\  _,-"" ,| `,'   /
