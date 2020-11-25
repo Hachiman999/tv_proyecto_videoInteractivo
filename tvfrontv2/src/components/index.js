@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import img from "../assets/fondo.GIF";
+import s from "../assets/logo_s.jpg"
 import './styles.css';
 class App extends Component {
   constructor(props) {
@@ -19,11 +20,22 @@ class App extends Component {
     return (
       <div className="container_index">
         <img id="background-video" alt="some value" src={img} />
+        <div className="titulo text-white ">
+          ssssssssssssssssssssssssssssssssssssssssssssss
+          ssssssssssssssssssssssssssssssssssssssssssssssss
+          ssssssssssssssssssssssssssssssssssssssssssssss
+          ssssssssssssssssssssssssssssssssssssssssssssssss
+          ssssssssssssssssssssssssssssssssssssssssssssss
+          ssssssssssssssssssssssssssssssssssssssssssssssss
+        </div>
+        <div>
+
+        </div>
         <div className="btn_historias">
           <button onClick={this.metodox}>elegir historia</button>
         </div>
         <div className="btn_articulos">
-          <button onClick={this.metodoq}>ver articulos </button>
+          <button onClick={this.metodoq}>  <img className="h-5 w-5" id="background-video" alt="some value" src={s} /> </button>
         </div>
 
 

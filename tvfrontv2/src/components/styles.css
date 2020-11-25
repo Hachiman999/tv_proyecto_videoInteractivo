@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Rasa&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Radley:ital@1&display=swap");
 .container_index {
   margin: 0;
   padding: 0;
@@ -23,4 +25,11 @@
   margin-top: 15%;
 }
 .btn_ar {
+}
+.titulo {
+  font-family: "Orbitron", sans-serif;
+  font-family: "Rasa", serif;
+}
+#background-video {
+  position: fixed;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import bus from "../components/bus";
 import cus from "../components/cus";
 import index from "../components/index";
@@ -11,7 +11,7 @@ import por from "../pages/index";
 import prueba from "../pages/prueba"
 
 class Main extends Component {
-  render() {
+  render () {
     return (
       <div>
         <Switch>
