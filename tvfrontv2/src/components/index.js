@@ -10,36 +10,30 @@ class App extends Component {
     this.metodox = this.metodox.bind(this);
   }
 
-  metodoq () {
+  metodoq() {
     this.props.history.push("/");
   }
-  metodox () {
+  metodox() {
     this.props.history.push("/hs");
   }
-  render () {
+  render() {
     return (
-      <div className="container_index">
+      <div className="container container_index">
         <img id="background-video" alt="some value" src={img} />
-        <div className="titulo text-white ">
-          ssssssssssssssssssssssssssssssssssssssssssssss
-          ssssssssssssssssssssssssssssssssssssssssssssssss
-          ssssssssssssssssssssssssssssssssssssssssssssss
-          ssssssssssssssssssssssssssssssssssssssssssssssss
-          ssssssssssssssssssssssssssssssssssssssssssssss
-          ssssssssssssssssssssssssssssssssssssssssssssssss
+        <div className="row w-100">
+          <div className="col-12 col-sm-6">
+            <p className="ml-5 mt-5 display-3 titulo text-white ">De una a mil muertes:</p>
+            <p className="ml-5 mb-5 display-3 titulo text-white ">El luto y el dolor que deja el coronavirus</p>
+          </div>
         </div>
-        <div>
-
+        <div className="row w-100 mb-5 mt-5 ml-3">
+          <div className="col-12 ml-5 mb-5 col-sm-6">
+            <button type="button" className="btn btn-link mt-5" onClick={this.metodox}><p className="ml-5 mt-5 h1 o-subtitulo text-white ">Da click para iniciar</p></button>
+          </div>
         </div>
-        <div className="btn_historias">
-          <button onClick={this.metodox}>elegir historia</button>
+        <div className="row p-1 mt-5">
+          <button type="button" className="btn btn-link ml-auto mr-5 mt-5 p-0 " onClick={this.metodoq}><img className="o-articule-img" alt="some value" src={s} /></button>
         </div>
-        <div className="btn_articulos">
-          <button onClick={this.metodoq}>  <img className="h-5 w-5" id="background-video" alt="some value" src={s} /> </button>
-        </div>
-
-
-
       </div>
     );
   }
