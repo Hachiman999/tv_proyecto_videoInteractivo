@@ -46,6 +46,23 @@
 	padding: 0;
 	position: fixed;
 }
+
+.o-form-container {
+	background-color: black;
+	height: 100vh;
+}
+.o-btn-close {
+	background: none;
+	border: 0;
+	padding: 0;
+	color: white;
+}
+.o-btn-close:hover {
+	color: #292b2c;
+}
+.o-btn-send {
+	background-color: red;
+}
 @media only screen and (max-width: 1000px) {
 	.titulo {
 		font-family: "Orbitron", sans-serif;
