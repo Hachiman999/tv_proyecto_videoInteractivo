@@ -12,24 +12,64 @@ class App extends Component {
     this.rutahistoria1 = this.rutahistoria1.bind(this);
   }
 
-  rutahistoria1 () {
+  rutahistoria1() {
     this.props.history.push("/ha");
   }
-  rutahistoria2 () {
+  rutahistoria2() {
     this.props.history.push("/hb");
   }
 
 
-  render () {
-    return (
-      <div className="contenedor-btn">
-        <button onClick={this.rutahistoria1} className="btn-historia1"  > <AiOutlinePlayCircle size='10rem' /> </button>
-        <button onClick={this.rutahistoria2} className="btn-historia2" > <AiOutlinePlayCircle size='10rem' /> </button>
+  render() {
+    /*
+ <div className="contenedor-btn">
+              <button onClick={this.rutahistoria1} className="btn-historia1"  > <AiOutlinePlayCircle size='10rem' /> </button>
+              <button onClick={this.rutahistoria2} className="btn-historia2" > <AiOutlinePlayCircle size='10rem' /> </button>
 
-        <div className="contenerdor-video" >
-          <video autoPlay loop playsInline muted src={ejem3} className="videof1" />
-          <video autoPlay loop playsInline muted src={ejem4} className="videof2" />
+              <div className="contenerdor-video" >
+
+
+              </div>
+            </div>
+    */
+    return (
+      <div className=" container-fluid m-0  p-0">
+    
+        <div className="row m-0 p-0 ">
+          <div className="col-12 col-sm-6 p-0">
+            <video autoPlay loop muted src={ejem3} className=" p-0 o-vid  w-auto m-0 " />
+            <div className="col-12 p-0 m-0 o-btn-container">
+              <div className=" d-flex o-btn-container justify-content-center">
+                <span onClick={this.rutahistoria1} className="btn mt-auto btn-link  p-0 o-btn-story"  > <AiOutlinePlayCircle size='10rem' /> </span>
+              </div>
+            </div>
+            <div className="col-12  mt-5 p-0 m-0 ">
+              <div className=" d-flex mt-5  justify-content-center">
+                <p className="h3 titulo mt-5 text-white">Trabajador</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6">
+            <video autoPlay loop muted src={ejem4} className="m-0  o-vid p-0 w-auto  " />
+            <div className="col-12 p-0 m-0 o-btn-container">
+              <div className=" d-flex o-btn-container justify-content-center">
+                <span onClick={this.rutahistoria2} className="btn mt-auto btn-link  p-0 o-btn-story"  > <AiOutlinePlayCircle size='10rem' /> </span>
+              </div>
+            </div>
+            <div className="col-12 mt-5 p-0 m-0 ">
+              <div className=" d-flex mt-5  justify-content-center">
+                <p className="h3 titulo mt-5">Abuela</p>
+              </div>
+            </div>
+          </div>
         </div>
+  
+        <div className="row w-100 m-0 p-0">
+          <nav className="navbar shadow-sm fixed-bottom o-navbar w-100 m-0 p-4 d-flex justify-content-center  navbar-expand-sm o-navbar ">
+            <p className="h1 o-subtitulo text-white">Selecciona una historia</p>
+          </nav>
+        </div>
+        
       </div>
     );
   }
