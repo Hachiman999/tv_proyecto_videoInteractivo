@@ -12,15 +12,16 @@ rutas.post('/cu', async (req, res) => {
   console.log(chalk.grey('ruta: ') + chalk.white.bgBlue(req.route.path));
   const { nombre, comentario } = req.body;
   const usuarios = await user.find({});
-
-  const newUser = new user({
-    id: usuarios.length + 1,
+  const n = usuarios.length + 1;
+  const obj = {
+    id: n,
     nombre: nombre,
     comentario: comentario
-  });
-  const userSaved = await newUser.save();
+  }
+  const newUser = new user(obj);
+  await newUser.save();
 
-  res.json(req.body);
+  res.json(obj);
 });
 
 

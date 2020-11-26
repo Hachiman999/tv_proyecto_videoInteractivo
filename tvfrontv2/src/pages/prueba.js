@@ -206,7 +206,7 @@ class App extends Component {
 
             </div>
             <div className="row d-flex justify-content-end">
-              <a href="/cu" className="btn btn-lg  btn-link p-0"><FaRegArrowAltCircleRight className=" display-3 o-btn-close mr-5" /></a>
+              <a href="/creditos" className="btn btn-lg  btn-link p-0"><FaRegArrowAltCircleRight className=" display-3 o-btn-close mr-5" /></a>
             </div>
           </div>
 

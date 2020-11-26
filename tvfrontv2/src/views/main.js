@@ -25,7 +25,7 @@ class Main extends Component {
           <Route exact path="/hb" component={hb} />
           <Route exact path="/honorPage" component={honorPage} />
           <Route exact path="/prueba" component={prueba} />
-          <Route exact path="/creditos" component={prueba} />
+          <Route exact path="/creditos" component={credi} />
         </Switch>
       </div>
     );
