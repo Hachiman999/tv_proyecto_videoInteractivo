@@ -88,8 +88,8 @@ class rutaB extends Component {
                 <div className={(this.state.pause ? "o-show  " : "") + "o-test-pause h-100 w-100  row"}>
                     <div className="col-12 d-flex justify-content-end align-self-center col-sm-6">
                         <span onClick={this.changeVideo} className="btn o-option-video-card">
-                            <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={this.state.video === 1 ? this.state.familiar : this.state.video === 2 ? this.state.familiar : this.state.hospital} />
-                            <p className="h3 text-dark text-center mt-5 font-weight-bold">{this.state.video === 1 ? "Llamar a un familiar" : this.state.video === 2 ? "Llamar a un familiar" : "Hospitalizarse"}</p>
+                            <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={this.state.video === 1 ? this.state.familiar : this.state.video === 2 ? this.state.ambulancia : this.state.hospital} />
+                            <p className="h3 text-dark text-center mt-5 font-weight-bold">{this.state.video === 1 ? "Llamar a un familiar" : this.state.video === 2 ? "Llamar una ambulancia" : "Hospitalizarse"}</p>
                             <div className="d-flex justify-content-center">
                                 <div className=" bg-success o-option-border">
                                 </div>
@@ -98,8 +98,8 @@ class rutaB extends Component {
                     </div>
                     <div className="col-12 col-sm-6 d-flex justify-content-start align-self-center">
                         <span onClick={this.retry} className="btn o-option-video-card">
-                            <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={this.state.video === 1 ? this.state.bus : this.state.video === 2 ?  this.state.ambulancia : this.state.casa} />
-                            <p className="h3 text-dark text-center mt-5 font-weight-bold">{this.state.video === 1 ? "Ir en bus" : this.state.video === 2 ? "Llamar una ambulancia" : "Volver a casa"}</p>
+                            <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={this.state.video === 1 ? this.state.bus : this.state.video === 2 ?  this.state.familiar : this.state.casa} />
+                            <p className="h3 text-dark text-center mt-5 font-weight-bold">{this.state.video === 1 ? "Ir en bus" : this.state.video === 2 ? "Llamar a un familiar" : "Volver a casa"}</p>
                             <div className="d-flex justify-content-center">
                                 <div className=" bg-danger o-option-border">
                                 </div>
