@@ -11,7 +11,7 @@ class App extends Component {
     update = (name, e) => {
         this.setState({ [name]: e.target.value });
     };
-    enviarinfo() {
+    enviarinfo () {
 
         const httpInstance = axios.create({
             baseURL: "http://localhost:8080/",
@@ -40,7 +40,7 @@ class App extends Component {
 
     }
 
-    render() {
+    render () {
         return (
             <div className="container-fluid p-5  o-form-container">
                 <div className="row d-flex justify-content-center">

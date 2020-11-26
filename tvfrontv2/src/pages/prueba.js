@@ -68,9 +68,8 @@ class App extends Component {
         for (var i in data) {
           resstatus.push({
             id: data[i].id,
-            nombre: data[i].name,
-            comentario: data[i].comentario,
-            status: false
+            nombre: data[i].nombre,
+            comentario: data[i].comentario
           })
 
         }
@@ -85,6 +84,7 @@ class App extends Component {
 
 
         this.setState({ comentarios: finarandom, render2: true });
+        console.log(this.state.comentarios);
 
       })
   }//fin del componentDidmount
