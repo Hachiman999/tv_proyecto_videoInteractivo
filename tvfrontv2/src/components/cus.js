@@ -36,32 +36,35 @@ class App extends Component {
         }).catch(error => {
             console.error(error);
         })
+        this.props.history.push("/prueba");
 
     }
 
     render() {
         return (
-            <div className="container-fluid p-5 d-flex justify-content-center o-form-container">
-                <div className="m-5 rounded p-3 bg-secondary w-50 ">
-                    <div className="d-flex justify-content-end">
-                        <span onClick={() => { this.props.history.push("/prueba"); }} className="btn btn-lg  btn-link p-0"><AiOutlineCloseCircle className=" h1 o-btn-close m-0"/></span>
-                    </div>
-                    <div className="d-flex justify-content-center p-3">
-                        <p className="h2 text-white text-center mr-5 ml-5 font-weight-bold">Deja tu comentario para todas las victimas del COVID-19</p>
-                    </div>
-                    <form className="mr-4 ml-4 mb-0 ">
-                        <div className="form-group ">
-                            <label htmlFor="NameInput" className="h3 font-weight-bold">Nombre:</label>
-                            <input type="text" value={this.state.nombre} onChange={(e) => this.update("nombre", e)} id="NameInput"  className="form-control" placeholder="Nombre" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="commenttArea" className="h3 font-weight-bold">Comentario:</label>
-                            <textarea value={this.state.comentario} onChange={(e) => this.update("comentario", e)} className="form-control" id="commenttArea" rows="5"></textarea>
-                        </div>
+            <div className="container-fluid p-5  o-form-container">
+                <div className="row d-flex justify-content-center">
+                    <div className="m-5 rounded p-3 o-cont-arnold w-50 ">
                         <div className="d-flex justify-content-end">
-                            <button type="button" className="btn o-btn-send font-weight-bold text-white" onClick={this.enviarinfo}>Enviar</button>
+                            <a href="/prueba" className="btn btn-lg  btn-link p-0"><AiOutlineCloseCircle className=" h1 o-btn-close m-0" /></a>
                         </div>
-                    </form>
+                        <div className="d-flex justify-content-center p-3">
+                            <p className="h2 text-white text-center mr-5 ml-5 font-weight-bold">Deja tu comentario para todas las victimas del COVID-19</p>
+                        </div>
+                        <form className="mr-4 ml-4 mb-0 ">
+                            <div className="form-group ">
+                                <label htmlFor="NameInput" className="h3 font-weight-bold">Nombre:</label>
+                                <input type="text" value={this.state.nombre} onChange={(e) => this.update("nombre", e)} id="NameInput" className="form-control" placeholder="Nombre" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="commenttArea" className="h3 font-weight-bold">Comentario:</label>
+                                <textarea value={this.state.comentario} onChange={(e) => this.update("comentario", e)} className="form-control" id="commenttArea" rows="5"></textarea>
+                            </div>
+                            <div className="d-flex justify-content-end">
+                                <button type="button" className="btn btn-lg o-btn-send font-weight-bold text-white" onClick={this.enviarinfo}>Enviar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         )

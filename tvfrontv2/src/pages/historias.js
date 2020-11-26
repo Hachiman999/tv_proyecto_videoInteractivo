@@ -21,17 +21,7 @@ class App extends Component {
 
 
   render() {
-    /*
- <div className="contenedor-btn">
-              <button onClick={this.rutahistoria1} className="btn-historia1"  > <AiOutlinePlayCircle size='10rem' /> </button>
-              <button onClick={this.rutahistoria2} className="btn-historia2" > <AiOutlinePlayCircle size='10rem' /> </button>
 
-              <div className="contenerdor-video" >
-
-
-              </div>
-            </div>
-    */
     return (
       <div className=" container-fluid m-0  p-0">
     
