@@ -11,6 +11,8 @@ import por from "../pages/index";
 import prueba from "../pages/prueba"
 import honorPage from "../pages/honorPage";
 import credi from "../pages/creditos";
+import test from "../pages/test";
+
 class Main extends Component {
   render () {
     return (
@@ -26,6 +28,8 @@ class Main extends Component {
           <Route exact path="/honorPage" component={honorPage} />
           <Route exact path="/prueba" component={prueba} />
           <Route exact path="/creditos" component={credi} />
+          <Route exact path="/test" component={test} />
+
         </Switch>
       </div>
     );
