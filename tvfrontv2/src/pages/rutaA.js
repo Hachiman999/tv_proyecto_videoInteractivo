@@ -4,11 +4,6 @@ import video2 from "../assets/A2.mp4";
 import video3 from "../assets/A3.mp4";
 import video4 from "../assets/A4.mp4";
 import video5 from "../assets/A5.mp4";
-import video6 from "../assets/A6.mp4";
-import video7 from "../assets/A7.mp4";
-import video8 from "../assets/A8.mp4";
-import video9 from "../assets/A9.mp4";
-import video10 from "../assets/A10.mp4";
 import videoMuerte from "../assets/MuerteA.mp4";
 import Lottie from 'react-lottie';
 import conducir from "../assets/conducir.json";
@@ -22,11 +17,13 @@ import fiesta from "../assets/fiesta.json";
 
 import "./styles.css";
 
-class test extends Component {
+class rutaA extends Component {
     constructor(props) {
         super(props);
         this.changeVideo = this.changeVideo.bind(this);
         this.retry = this.retry.bind(this);
+        this.next = this.next.bind(this);
+
         this.state = {
             video: 1,
             lastVideo: 1,
@@ -94,11 +91,18 @@ class test extends Component {
         }
     }
     changeVideo = () => {
-        this.setState({ video: this.state.video + 1, pause: false, lastVideo: this.state.lastVideo + 1});
+        this.setState({ video: this.state.video + 1, pause: false, lastVideo: this.state.lastVideo + 1 });
+
+
     }
 
     retry = () => {
-        this.setState({ video: this.state.lastVideo });
+        this.setState({ video: 8, pause: false });
+    }
+
+    next = () => {
+        
+        this.state.video < 5 ? this.setState({ pause: true }) : this.state.video === 8 ? this.setState({ video: this.state.lastVideo }) : this.props.history.push("/honorPage");
     }
     render() {
         return (
@@ -120,7 +124,7 @@ class test extends Component {
                         </span>
                     </div>
                     <div className="col-12 col-sm-6 d-flex justify-content-start align-self-center">
-                        <span onClick={()=> this.setState({video:6, pause:false})} className="btn o-option-video-card">
+                        <span onClick={this.retry} className="btn o-option-video-card">
                             <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={this.state.video === 1 ? this.state.conducir : this.state.video === 2 ? this.state.trabajar : this.state.video === 3 ? this.state.trabajar2 : this.state.fiesta} />
                             <p className="h3 text-dark text-center mt-5 font-weight-bold">{this.state.video === 1 ? "Seguir conduciendo" : this.state.video === 2 ? "Trabajar" : this.state.video === 3 ? "Trabajar" : "Ir a la fiesta"}</p>
                             <div className="d-flex justify-content-center">
@@ -132,7 +136,7 @@ class test extends Component {
 
                 </div>
                 <div className="d-flex justify-content-center">
-                    <video src={this.state.video === 1 ? video1 : this.state.video === 2 ? video2 : this.state.video === 3 ? video3 : this.state.video === 4 ? video4 : this.state.video === 5 ? video5 : videoMuerte} id="storyvid" onEnded={() => this.setState({ pause: true })} autoPlay muted={false} controls className="o-video-stories" />
+                    <video src={this.state.video === 1 ? video1 : this.state.video === 2 ? video2 : this.state.video === 3 ? video3 : this.state.video === 4 ? video4 : this.state.video === 5 ? video5 : videoMuerte} id="storyvid" onEnded={this.next} autoPlay muted={false} controls className="o-video-stories" />
                 </div>
 
             </div>
@@ -140,4 +144,4 @@ class test extends Component {
     }
 }
 
-export default test;
+export default rutaA;
