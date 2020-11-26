@@ -85,6 +85,7 @@ class App extends Component {
 
 
         this.setState({ comentarios: finarandom, render2: true });
+        console.log(this.state.comentarios);
 
       })
   }//fin del componentDidmount
