@@ -22,3 +22,12 @@
   visibility: visible;
   transition: all 0.5s;
 }
+.o-btn-close {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: white;
+}
+.o-btn-close:hover {
+  color: #292b2c;
+}

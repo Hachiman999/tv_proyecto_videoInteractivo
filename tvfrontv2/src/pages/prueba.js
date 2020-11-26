@@ -6,7 +6,7 @@ import saludable from "../assets/saludable.json";
 import muerto from "../assets/dead.json";
 import manos from "../assets/manos.json";
 import "./styless2.css";
-
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 class App extends Component {
 
@@ -97,7 +97,7 @@ class App extends Component {
     if (this.state.render1 && this.state.render2) {
       return (
 
-        <div >
+        <div>
 
           <div className="album py-5">
             <div className="container">
@@ -203,8 +203,13 @@ class App extends Component {
 
 
               </div>
+
+            </div>
+            <div className="row d-flex justify-content-end">
+              <a href="/cu" className="btn btn-lg  btn-link p-0"><FaRegArrowAltCircleRight className=" display-3 o-btn-close mr-5" /></a>
             </div>
           </div>
+
         </div>
       );
     } else {
