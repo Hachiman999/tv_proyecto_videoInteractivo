@@ -135,6 +135,21 @@ body {
 	color: white;
 	z-index: 3;
 	position: fixed;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-20px);
+}
+.o-show {
+	visibility: visible;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-ms-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+	filter: alpha(opacity=50);
+	opacity: 1;
+
+	transform: translateY(10px);
 }
 .o-option-video-card {
 	min-width: 20rem;
