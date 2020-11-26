@@ -47,6 +47,7 @@ class App extends Component {
       }
     };
     this.togglePopover = this.togglePopover.bind(this);
+
   }
   componentDidMount () {
 
@@ -60,23 +61,37 @@ class App extends Component {
     axios.get(`http://localhost:8080/us`)
       .then(res => {
         const { data } = res;
+        //  console.log(data)
         var resstatus = [];
+        var finarandom = [];
+        var temp = [];
         for (var i in data) {
           resstatus.push({
-            id: data[i]._id,
-            nombre: data[i].nombre,
+            id: data[i].id,
+            nombre: data[i].name,
             comentario: data[i].comentario,
             status: false
           })
 
         }
-        this.setState({ comentarios: resstatus, render2: true });
+        for (var i = 0; i < 21; i++) {
+          const n = Math.floor(Math.random() * data.length);
+          temp.push(n);
+        }
+
+        for (var i in temp) {
+          finarandom.push(resstatus[temp[i]]);
+        }
+
+
+        this.setState({ comentarios: finarandom, render2: true });
 
       })
   }//fin del componentDidmount
   togglePopover () {
     this.setState({ popoverOpen: !this.state.popoverOpen })
   }
+
 
   render () {
     if (this.state.render1 && this.state.render2) {
@@ -88,7 +103,7 @@ class App extends Component {
             <div className="container">
               <div className="row">
                 <div className="col-md-4">
-                  <div className="card car_v mb-4">
+                  <div className="card mt-0 p-0 car_v mb-4">
                     <Lottie className="bd-placeholder-img card-img-top" width="100%" height="225"
                       options={this.state.virus}
 
@@ -98,7 +113,7 @@ class App extends Component {
                         <p className="text-danger display-4 text-center">
                           {this.state.confirmed.value}
                         </p>
-                        <p className="text-center text-dark  display-4 ">
+                        <p className="text-center  text-white display-4 ">
                           Contagiados
                        </p>
                       </p>
@@ -107,7 +122,7 @@ class App extends Component {
                   </div>
                 </div>
                 <div className="col-md-4">
-                  <div className="card car_v mb-4">
+                  <div className="card car_v p-0  mt-0 mb-4">
                     <Lottie className="bd-placeholder-img card-img-top" width="100%" height="225"
                       options={this.state.saludable}
 
@@ -117,7 +132,7 @@ class App extends Component {
                         <p className="text-danger display-4 text-center">
                           {this.state.recovered.value}
                         </p>
-                        <p className="text-center text-dark  display-4 ">
+                        <p className="text-center text-white  display-4 ">
                           Recuperados
                        </p>
                       </p>
@@ -126,17 +141,17 @@ class App extends Component {
                   </div>
                 </div>
                 <div className="col-md-4">
-                  <div className="card car_v mb-4">
-                    <Lottie className="bd-placeholder-img card-img-top" width="100%" height="225"
+                  <div className="card mt-5 car_v mb-4">
+                    <Lottie className="bd-placeholder-img card-img-top img_ani mb-5 " width="76%"
                       options={this.state.muerto}
 
                     />
-                    <div className="card-body">
+                    <div className="card-body mt-3">
                       <p className="card-text">
                         <p className="text-danger display-4 text-center">
                           {this.state.deaths.value}
                         </p>
-                        <p className="text-center text-dark  display-4 ">
+                        <p className="text-center text-white display-4 ">
                           Fallecidos
                        </p>
                       </p>
@@ -153,8 +168,8 @@ class App extends Component {
 
                       <button
                         type="button"
-                        className="btn "
-                        id={item._id}
+                        className="btn btn_v "
+                        id={item.id}
 
                       >
 
@@ -165,6 +180,17 @@ class App extends Component {
                           width={100}
 
                         />
+
+                        <div className="figcaption  bg-white" >
+                          <p>
+                            {item.nombre}
+
+                          </p>
+                          <p>
+                            {item.comentario}
+                          </p>
+
+                        </div>
 
                       </button>
 
