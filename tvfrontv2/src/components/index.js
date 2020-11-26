@@ -10,13 +10,13 @@ class App extends Component {
     this.metodox = this.metodox.bind(this);
   }
 
-  metodoq() {
-    this.props.history.push("/");
+  metodoq () {
+    this.props.history.push("/articulos");
   }
-  metodox() {
+  metodox () {
     this.props.history.push("/hs");
   }
-  render() {
+  render () {
     return (
       <div className="container container_index">
         <img id="background-video" alt="some value" src={img} />
