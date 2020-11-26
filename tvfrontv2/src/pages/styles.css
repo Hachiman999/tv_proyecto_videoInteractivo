@@ -1,109 +1,110 @@
 /*/Primera prueba de codigo css con react/*/
 body {
-	font-family: "Rasa", serif;
+  font-family: "Rasa", serif;
+  background: black;
 }
 .contenedor-btn {
-	background-color: none;
-	display: flex;
-	align-items: center;
-	margin-top: 0;
+  background-color: none;
+  display: flex;
+  align-items: center;
+  margin-top: 0;
 }
 
 .contenerdor-video {
-	background-color: royalblue;
-	height: 100%;
-	display: inline-flex;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	margin: 0;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	z-index: -1;
+  background-color: royalblue;
+  height: 100%;
+  display: inline-flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
 }
 .videof1 {
-	position: absolute;
-	height: 100%;
-	min-width: 55%;
-	z-index: -1;
+  position: absolute;
+  height: 100%;
+  min-width: 55%;
+  z-index: -1;
 }
 
 .videof2 {
-	position: absolute;
-	height: 100%;
-	min-width: 55%;
-	margin-left: 60rem;
-	z-index: -1;
+  position: absolute;
+  height: 100%;
+  min-width: 55%;
+  margin-left: 60rem;
+  z-index: -1;
 }
 .o-btn-container {
-	height: 50vh;
+  height: 50vh;
 }
 .o-navbar {
-	background: black;
+  background: black;
 }
 .o-btn-story {
-	color: white;
-	background: none;
-	border: 0;
-	height: 10rem;
+  color: white;
+  background: none;
+  border: 0;
+  height: 10rem;
 }
 .o-btn-story:hover {
-	color: red;
-	transform: translateY(-10px);
+  color: red;
+  transform: translateY(-10px);
 }
 .btn-historia2 {
-	color: white;
-	background: none;
-	border: 0;
-	height: 10rem;
-	z-index: 2;
+  color: white;
+  background: none;
+  border: 0;
+  height: 10rem;
+  z-index: 2;
 }
 .btn-historia2:hover {
-	color: red;
-	transform: translateY(-10px);
+  color: red;
+  transform: translateY(-10px);
 }
 /*/Segunda prueba de codigo css con react/*/
 .logo_prueba {
-	width: 100px;
-	height: 100px;
-	margin: 20px;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
 }
 .card {
-	color: white;
+  color: white;
 }
 .btn-salir {
-	float: right;
-	background: none;
-	margin: 10px;
-	border: 0;
-	color: white;
+  float: right;
+  background: none;
+  margin: 10px;
+  border: 0;
+  color: white;
 }
 .btn-salir:hover {
-	color: red;
+  color: red;
 }
 
 .contenedor-card {
-	background-color: white;
-	color: black;
-	width: 30%;
-	display: block;
-	text-align: center;
-	margin: 100px;
+  background-color: white;
+  color: black;
+  width: 30%;
+  display: block;
+  text-align: center;
+  margin: 100px;
 }
 .img-card {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .o-vid-container {
-	top: 0;
-	left: 0;
-	right: 0;
-	overflow-x: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
 }
 
 .o-vid {
-	z-index: -1;
+  z-index: -1;
 }
