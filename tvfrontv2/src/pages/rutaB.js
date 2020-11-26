@@ -75,9 +75,9 @@ class rutaB extends Component {
 
     next = () => {
 
-        this.state.video < 4 ? this.setState({ pause: true }) : this.state.video === 8 ? this.setState({ video: this.state.lastVideo }) : this.props.history.push("/honorPage");
+        this.state.video < 4 ? this.setState({ pause: true }) : this.state.video === 8 ? this.setState({ video: this.state.lastVideo }) : this.props.history.push("/honorPagesr");
     }
-    render() {
+    render () {
         return (
             <div className="container-fluid o-story-container m-0 p-0">
                 <div className={(this.state.pause ? "o-show " : "") + "o-test-pause h-100 w-100  row"}>
@@ -98,7 +98,7 @@ class rutaB extends Component {
                     </div>
                     <div className="col-12 col-sm-6 d-flex justify-content-start align-self-center">
                         <span onClick={this.retry} className="btn o-option-video-card">
-                            <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={this.state.video === 1 ? this.state.bus : this.state.video === 2 ?  this.state.familiar : this.state.casa} />
+                            <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={this.state.video === 1 ? this.state.bus : this.state.video === 2 ? this.state.familiar : this.state.casa} />
                             <p className="h3 text-dark text-center mt-5 font-weight-bold">{this.state.video === 1 ? "Ir en bus" : this.state.video === 2 ? "Llamar a un familiar" : "Volver a casa"}</p>
                             <div className="d-flex justify-content-center">
                                 <div className=" bg-danger o-option-border">

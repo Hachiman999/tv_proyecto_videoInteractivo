@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import video1 from "../assets/A1.mp4";
-import video2 from "../assets/A2.mp4";
-import video3 from "../assets/A3.mp4";
-import video4 from "../assets/A4.mp4";
-import video5 from "../assets/A5.mp4";
+import video1 from "../assets/Historia 1 Organizado/H1-1.mp4";
+import video2 from "../assets/Historia 1 Organizado/H1-2.mp4";
+import video3 from "../assets/Historia 1 Organizado/H1-3.mp4";
+import video4 from "../assets/Historia 1 Organizado/h1-4.mp4";
+import video5 from "../assets/Historia 1 Organizado/H1-5.mp4";
 import videoMuerte from "../assets/MuerteA.mp4";
 import Lottie from 'react-lottie';
 import conducir from "../assets/conducir.json";
@@ -27,7 +27,7 @@ class rutaA extends Component {
         this.state = {
             video: 1,
             lastVideo: 1,
-            pause:false,
+            pause: false,
             conducir: {
                 loop: true,
                 autoplay: true,
@@ -50,7 +50,7 @@ class rutaA extends Component {
                 rendererSettings: {
                     preserveAspectRatio: "xMidYMid slice"
                 }
-            },  trabajar: {
+            }, trabajar: {
                 loop: true,
                 autoplay: true,
                 animationData: trabajar,
@@ -87,7 +87,7 @@ class rutaA extends Component {
                     preserveAspectRatio: "xMidYMid slice"
                 }
             }
-            
+
         }
     }
     changeVideo = () => {
@@ -101,13 +101,13 @@ class rutaA extends Component {
     }
 
     next = () => {
-        
+
         this.state.video < 5 ? this.setState({ pause: true }) : this.state.video === 8 ? this.setState({ video: this.state.lastVideo }) : this.props.history.push("/honorPage");
     }
-    render() {
+    render () {
         return (
             <div className="container-fluid o-story-container m-0 p-0">
-                <div className={(this.state.pause ? "o-show " : "")+"o-test-pause h-100 w-100  row"}>
+                <div className={(this.state.pause ? "o-show " : "") + "o-test-pause h-100 w-100  row"}>
                     <div className="col-12 d-flex justify-content-center  col-sm-12">
                         <p className="o-text-chose text-white mt-5">Selecciona las opciones que te parezcan correctas</p>
                     </div>
@@ -115,7 +115,7 @@ class rutaA extends Component {
                 <div className={(this.state.pause ? "o-show  " : "") + "o-test-pause h-100 w-100  row"}>
                     <div className="col-12 d-flex justify-content-end align-self-center col-sm-6">
                         <span onClick={this.changeVideo} className="btn o-option-video-card">
-                            <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={ this.state.video === 1 ? this.state.radio : this.state.video === 2 ? this.state.cuarentena : this.state.video === 3 ?  this.state.comprar : this.state.casa } />
+                            <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={this.state.video === 1 ? this.state.radio : this.state.video === 2 ? this.state.cuarentena : this.state.video === 3 ? this.state.comprar : this.state.casa} />
                             <p className="h3 text-dark text-center mt-5 font-weight-bold">{this.state.video === 1 ? "Escuchar la radio" : this.state.video === 2 ? "Entrar en cuarentena" : this.state.video === 3 ? "Comprar" : "Volver a casa"}</p>
                             <div className="d-flex justify-content-center">
                                 <div className=" bg-success o-option-border">

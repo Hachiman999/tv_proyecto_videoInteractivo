@@ -1,2 +1,0 @@
-web: deno run --allow-env --allow-net=:${PORT}  --allow-plugin  --allow-read --allow-write --cached-only --unstable index.ts --port=${PORT}git 
-

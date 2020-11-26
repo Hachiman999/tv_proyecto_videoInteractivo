@@ -8,6 +8,7 @@ import hs from "../pages/historias";
 import por from "../pages/index";
 import prueba from "../pages/prueba"
 import honorPage from "../pages/honorPage";
+import honorPagesr from "../pages/honorpagessr";
 import credi from "../pages/creditos";
 import arti from "../pages/articulos";
 import rutaA from "../pages/rutaA";
@@ -24,6 +25,7 @@ class Main extends Component {
           <Route exact path="/p" component={por} />
           <Route exact path="/hs" component={hs} />
           <Route exact path="/honorPage" component={honorPage} />
+          <Route exact path="/honorPagesr" component={honorPagesr} />
           <Route exact path="/prueba" component={prueba} />
           <Route exact path="/creditos" component={credi} />
           <Route exact path="/articulos" component={arti} />

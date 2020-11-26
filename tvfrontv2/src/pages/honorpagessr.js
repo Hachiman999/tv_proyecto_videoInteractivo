@@ -19,7 +19,7 @@ const honorPage = () => {
                         <img className="w-50" src={foto} />
                     </div>
                     <div className="d-flex justify-content-end mr-5 mt-4">
-                        <p className="h3 text-light font-weight-bold ml-5">Arnold de Jesús Ricardo</p>
+                        <p className="h3 text-light font-weight-bold ml-5">Blanca Rosa Sánchez </p>
                     </div>
                 </div>
             </div>

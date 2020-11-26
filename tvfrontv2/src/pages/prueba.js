@@ -100,6 +100,9 @@ class App extends Component {
         <div>
 
           <div className="album py-5">
+            <div className="row d-flex justify-content-end">
+              <a href="/creditos" className="btn btn-lg  btn-link p-0"><FaRegArrowAltCircleRight className=" display-3 o-btn-close mr-5" /></a>
+            </div>
             <div className="container">
               <div className="row">
                 <div className="col-md-4">
@@ -205,9 +208,7 @@ class App extends Component {
               </div>
 
             </div>
-            <div className="row d-flex justify-content-end">
-              <a href="/creditos" className="btn btn-lg  btn-link p-0"><FaRegArrowAltCircleRight className=" display-3 o-btn-close mr-5" /></a>
-            </div>
+
           </div>
 
         </div>
