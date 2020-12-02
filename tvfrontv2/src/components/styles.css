@@ -1,82 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Rasa&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Radley:ital@1&display=swap");
 .container_index {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 
-	flex-wrap: wrap;
-	flex-direction: row;
-	min-width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  min-width: 100%;
 }
 
 .btn_articulos {
-	justify-items: right;
-	margin-right: 5px;
-	margin-top: 45%;
+  justify-items: right;
+  margin-right: 5px;
+  margin-top: 45%;
 }
 .btn_historias {
-	justify-items: left;
-	margin-left: 5px;
-	margin-top: 15%;
+  justify-items: left;
+  margin-left: 5px;
+  margin-top: 15%;
 }
 
 .titulo {
-	font-family: "Orbitron", sans-serif;
-	font-family: "Rasa", serif;
-	font-size: 4vw;
+  font-family: "Orbitron", sans-serif;
+  font-family: "Rasa", serif;
+  font-size: 4vw;
 }
 .o-subtitulo {
-	font-family: "Radley", serif;
+  font-family: "Radley", serif;
 }
 #background-video {
-	position: fixed;
+  position: fixed;
 }
 
 .o-articule-img {
-	width: 5rem;
-	height: 5rem;
+  width: 5rem;
+  height: 5rem;
 }
 .o-vid {
-	width: 100vw;
-	margin: 0;
-	padding: 0;
-	position: fixed;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: fixed;
 }
 
 .o-form-container {
-	background-color: black;
-	height: 100vh;
+  background-color: black;
+  height: 100vh;
 }
 .o-btn-close {
-	background: none;
-	border: 0;
-	padding: 0;
-	color: white;
+  background: none;
+  border: 0;
+  padding: 0;
+  color: white;
 }
 .o-btn-close:hover {
-	color: #292b2c;
+  color: #292b2c;
+}
+.btn-link {
+  color: red !important;
 }
 .o-btn-send {
-	background-color: red;
+  background-color: red;
 }
 
 .o-img-arnold {
-	width: 10rem;
+  width: 10rem;
 }
 .o-cont-arnold {
-	background-color: #4d4d4d;
+  background-color: #4d4d4d;
 }
 @media only screen and (max-width: 1000px) {
-	.titulo {
-		font-family: "Orbitron", sans-serif;
-		font-family: "Rasa", serif;
-		font-size: 3rem;
-	}
-	.o-subtitulo {
-		font-size: 2rem;
-	}
+  .titulo {
+    font-family: "Orbitron", sans-serif;
+    font-family: "Rasa", serif;
+    font-size: 3rem;
+  }
+  .o-subtitulo {
+    font-size: 2rem;
+  }
 }

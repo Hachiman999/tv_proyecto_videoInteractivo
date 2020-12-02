@@ -142,12 +142,12 @@ class App extends Component {
                   </div>
                 </div>
                 <div className="col-md-4">
-                  <div className="card mt-5 car_v mb-4">
-                    <Lottie className="bd-placeholder-img card-img-top img_ani mb-5 " width="100%"
+                  <div className="card car_v p-0  mt-0 mb-4">
+                    <Lottie className="bd-placeholder-img card-img-top" width="100%" height="225"
                       options={this.state.muerto}
 
                     />
-                    <div className="card-body mt-3">
+                    <div className="card-body">
                       <p className="card-text">
                         <p className="text-danger display-4 text-center">
                           {this.state.deaths.value}

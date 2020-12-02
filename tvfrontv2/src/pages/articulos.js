@@ -28,6 +28,54 @@ class App extends Component {
                                 </div>
                             </div>
                         </div>
+                        <div className="col-md-6">
+                            <div class="card mt-4" >
+                                <a href="#">
+                                    <img className="card-img-top" src={imgI} alt="Card image cap" />
+                                </a>
+                                <div class="card-body">
+
+                                    <p className="card-text  text-dark">De una a mil muertes:el luto y el dolor que deja el coronavirus</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div class="card mt-4" >
+                                <a href="#">
+                                    <img className="card-img-top" src={imgI} alt="Card image cap" />
+                                </a>
+                                <div class="card-body">
+
+                                    <p className="card-text  text-dark">De una a mil muertes:el luto y el dolor que deja el coronavirus</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div class="card mt-4" >
+                                <a href="#">
+                                    <img className="card-img-top" src={imgI} alt="Card image cap" />
+                                </a>
+                                <div class="card-body">
+
+                                    <p className="card-text  text-dark">De una a mil muertes:el luto y el dolor que deja el coronavirus</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div class="card mt-4" >
+                                <a href="#">
+                                    <img className="card-img-top" src={imgI} alt="Card image cap" />
+                                </a>
+                                <div class="card-body">
+
+                                    <p className="card-text  text-dark">De una a mil muertes:el luto y el dolor que deja el coronavirus</p>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
