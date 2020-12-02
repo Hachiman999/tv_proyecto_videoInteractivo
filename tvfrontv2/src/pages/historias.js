@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { AiOutlinePlayCircle } from "react-icons/ai";
-import ejem1 from "../assets/ejem1.gif";
-import ejem2 from "../assets/ejem2.gif";
+//import ejem1 from "../assets/ejem1.gif";
+//import ejem2 from "../assets/ejem2.gif";
 import ejem3 from "../assets/ejem3.mp4";
 import ejem4 from "../assets/ejem4.mp4";
 import './styles.css';
@@ -12,19 +12,19 @@ class App extends Component {
     this.rutahistoria1 = this.rutahistoria1.bind(this);
   }
 
-  rutahistoria1() {
+  rutahistoria1 () {
     this.props.history.push("/ha");
   }
-  rutahistoria2() {
+  rutahistoria2 () {
     this.props.history.push("/hb");
   }
 
 
-  render() {
+  render () {
 
     return (
       <div className=" container-fluid m-0  p-0">
-    
+
         <div className="row m-0 p-0 ">
           <div className="col-12 col-sm-6 p-0">
             <video autoPlay loop muted src={ejem3} className=" p-0 o-vid  w-auto m-0 " />
@@ -53,13 +53,13 @@ class App extends Component {
             </div>
           </div>
         </div>
-  
+
         <div className="row w-100 m-0 p-0">
           <nav className="navbar shadow-sm fixed-bottom o-navbar w-100 m-0 p-4 d-flex justify-content-center  navbar-expand-sm o-navbar ">
             <p className="h1 o-subtitulo text-white">Selecciona una historia</p>
           </nav>
         </div>
-        
+
       </div>
     );
   }

@@ -16,7 +16,7 @@ const honorPage = () => {
                         <p className="h3 text-light font-weight-bold ml-5">En memoria de...</p>
                     </div>
                     <div className="d-flex justify-content-center ml-5 mt-4">
-                        <img className="w-50" src={foto} />
+                        <img className="w-50" alt="foto" src={foto} />
                     </div>
                     <div className="d-flex justify-content-end mr-5 mt-4">
                         <p className="h3 text-light font-weight-bold ml-5">Blanca Rosa Sánchez </p>

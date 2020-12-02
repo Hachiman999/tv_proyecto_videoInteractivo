@@ -73,13 +73,14 @@ class App extends Component {
           })
 
         }
-        for (var i = 0; i < 21; i++) {
+        var x = 0;
+        for (x = 0; x < 21; x++) {
           const n = Math.floor(Math.random() * data.length);
           temp.push(n);
         }
-
-        for (var i in temp) {
-          finarandom.push(resstatus[temp[i]]);
+        var ix = 0;
+        for (ix = 0; ix < temp.length; ix++) {
+          finarandom.push(resstatus[temp[ix]]);
         }
 
 

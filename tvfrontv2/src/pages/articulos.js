@@ -3,9 +3,8 @@ import imgI from "../assets/articulos.PNG"
 import s from "../assets/logo_s.jpg"
 import { AiOutlineCloseCircle } from "react-icons/ai";
 class App extends Component {
-    constructor(props) {
-        super(props)
-    }
+
+
     render () {
         return (
             <div>
@@ -18,8 +17,8 @@ class App extends Component {
                     <div className="row">
                         <div className="col-md-6">
                             <div class="card mt-4" >
-                                <a href="#">
-                                    <img className="card-img-top" src={imgI} alt="Card image cap" />
+                                <a href="/">
+                                    <img className="card-img-top" alt="Card image cap" src={imgI} />
                                 </a>
                                 <div class="card-body">
 
