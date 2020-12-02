@@ -6,54 +6,54 @@ import '../App.css';
 import Card from './cardbus'
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
-    this.state = { dbdatos: [] ,estado: true};
-   
+    this.state = { dbdatos: [], estado: true };
+
   }
 
-  componentDidMount(){
-    fetch('http://localhost:8080/us')
-    .then(result => result.json())
-    .then(data => {
-     // this.setState({dbdatos:data})
-     const {dbdatos}=this.state ; 
-      for(var i =0 ; i< data.length ; i++){
-        dbdatos.push(data[i]); 
-      }
-      this.setState({dbdatos: dbdatos, estado:false});
+  componentDidMount () {
+    fetch('https://apitvback.herokuapp.com/us')
+      .then(result => result.json())
+      .then(data => {
+        // this.setState({dbdatos:data})
+        const { dbdatos } = this.state;
+        for (var i = 0; i < data.length; i++) {
+          dbdatos.push(data[i]);
+        }
+        this.setState({ dbdatos: dbdatos, estado: false });
 
-    // console.log(this.state.dbdatos.length) 
-    });
+        // console.log(this.state.dbdatos.length) 
+      });
   }//fin del componentWillMount
- 
- 
 
 
- 
- 
-  
-  render(){
-    
-    if(this.state.estado){
-     // console.log(this.state.dbdatos.length) 
-      return(
+
+
+
+
+
+  render () {
+
+    if (this.state.estado) {
+      // console.log(this.state.dbdatos.length) 
+      return (
         <div>
           Cargando..
         </div>
       );
-    }else{
-      console.log(this.state.dbdatos) 
-       
-      return(   
-        this.state.dbdatos.map((come)=>{
-         return( <div key={come._id}>
-           <Card nombre ={come.nombre} comentario={ come.comentario}/>
-                
-        </div>)
-         })
-        ); 
-    }    
+    } else {
+      console.log(this.state.dbdatos)
+
+      return (
+        this.state.dbdatos.map((come) => {
+          return (<div key={come._id}>
+            <Card nombre={come.nombre} comentario={come.comentario} />
+
+          </div>)
+        })
+      );
+    }
   }
 }
 
@@ -78,10 +78,10 @@ export default App;
  );
    //------
    httpInstance.get('us').then(usuarios => {
-    
-       const array = usuarios.data; 
+
+       const array = usuarios.data;
        console.log(array)
-     //  console.log(array); 
+     //  console.log(array);
      this.setState({dbdatos:array  })
  }).catch(error => {
      console.error(error);

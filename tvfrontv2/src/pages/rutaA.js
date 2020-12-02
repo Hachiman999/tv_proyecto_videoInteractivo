@@ -116,7 +116,7 @@ class rutaA extends Component {
                     <div className="col-12 d-flex justify-content-end align-self-center col-sm-6">
                         <span onClick={this.changeVideo} className="btn o-option-video-card">
                             <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={this.state.video === 1 ? this.state.radio : this.state.video === 2 ? this.state.cuarentena : this.state.video === 3 ? this.state.comprar : this.state.casa} />
-                            <p className="h3 text-dark text-center mt-5 font-weight-bold">{this.state.video === 1 ? "Escuchar la radio" : this.state.video === 2 ? "Entrar en cuarentena" : this.state.video === 3 ? "Comprar" : "Volver a casa"}</p>
+                            <p className="h3 text-dark text-center mt-5 font-weight-bold">{this.state.video === 1 ? "Escuchar la radio" : this.state.video === 2 ? "Entrar en cuarentena" : this.state.video === 3 ? "Comprar burbuja" : "Volver a casa"}</p>
                             <div className="d-flex justify-content-center">
                                 <div className=" bg-success o-option-border">
                                 </div>
@@ -128,7 +128,7 @@ class rutaA extends Component {
                             <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={this.state.video === 1 ? this.state.conducir : this.state.video === 2 ? this.state.trabajar : this.state.video === 3 ? this.state.trabajar2 : this.state.fiesta} />
                             <p className="h3 text-dark text-center mt-5 font-weight-bold">{this.state.video === 1 ? "Seguir conduciendo" : this.state.video === 2 ? "Trabajar" : this.state.video === 3 ? "Trabajar" : "Ir a la fiesta"}</p>
                             <div className="d-flex justify-content-center">
-                                <div className=" bg-danger o-option-border">
+                                <div className=" bg-success o-option-border">
                                 </div>
                             </div>
                         </span>

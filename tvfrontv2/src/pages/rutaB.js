@@ -101,7 +101,7 @@ class rutaB extends Component {
                             <Lottie className="bd-placeholder-img card-img-top" width="80%" height="350px" options={this.state.video === 1 ? this.state.bus : this.state.video === 2 ? this.state.familiar : this.state.casa} />
                             <p className="h3 text-dark text-center mt-5 font-weight-bold">{this.state.video === 1 ? "Ir en bus" : this.state.video === 2 ? "Llamar a un familiar" : "Volver a casa"}</p>
                             <div className="d-flex justify-content-center">
-                                <div className=" bg-danger o-option-border">
+                                <div className="bg-success o-option-border">
                                 </div>
                             </div>
                         </span>

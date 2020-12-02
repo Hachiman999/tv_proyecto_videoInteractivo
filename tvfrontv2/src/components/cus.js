@@ -14,7 +14,7 @@ class App extends Component {
     enviarinfo () {
 
         const httpInstance = axios.create({
-            baseURL: "http://localhost:8080/",
+            baseURL: "https://apitvback.herokuapp.com/",
             timeout: 1000,
             headers: { 'Content-Type': 'application/json' }
         });//

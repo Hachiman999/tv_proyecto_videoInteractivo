@@ -3,7 +3,7 @@ import axios from 'axios';
 import Lottie from 'react-lottie';
 import virus from "../assets/virus.json";
 import saludable from "../assets/saludable.json";
-import muerto from "../assets/dead.json";
+import muerto from "../assets/tumba.json";
 import manos from "../assets/manos.json";
 import "./styless2.css";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
@@ -58,7 +58,7 @@ class App extends Component {
 
       })
 
-    axios.get(`http://localhost:8080/us`)
+    axios.get(`https://apitvback.herokuapp.com/us`)
       .then(res => {
         const { data } = res;
         //  console.log(data)
@@ -100,9 +100,7 @@ class App extends Component {
         <div>
 
           <div className="album py-5">
-            <div className="row d-flex justify-content-end">
-              <a href="/creditos" className="btn btn-lg  btn-link p-0"><FaRegArrowAltCircleRight className=" display-3 o-btn-close mr-5" /></a>
-            </div>
+
             <div className="container">
               <div className="row">
                 <div className="col-md-4">
@@ -145,7 +143,7 @@ class App extends Component {
                 </div>
                 <div className="col-md-4">
                   <div className="card mt-5 car_v mb-4">
-                    <Lottie className="bd-placeholder-img card-img-top img_ani mb-5 " width="76%"
+                    <Lottie className="bd-placeholder-img card-img-top img_ani mb-5 " width="100%"
                       options={this.state.muerto}
 
                     />
@@ -208,7 +206,9 @@ class App extends Component {
               </div>
 
             </div>
-
+            <div className="row d-flex justify-content-end">
+              <a href="/creditos" className="btn btn-lg  btn-link p-0"><FaRegArrowAltCircleRight className=" display-3 o-btn-close mr-5" /></a>
+            </div>
           </div>
 
         </div>
