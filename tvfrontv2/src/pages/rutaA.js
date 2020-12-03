@@ -4,7 +4,7 @@ import video2 from "../assets/Historia 1 Organizado/H1-2.mp4";
 import video3 from "../assets/Historia 1 Organizado/H1-3.mp4";
 import video4 from "../assets/Historia 1 Organizado/H1-4.mp4";
 import video5 from "../assets/Historia 1 Organizado/H1-5.mp4";
-import videoMuerte from "../assets/MuerteA.mp4";
+import videoMuerte from "../assets/Historia 1 Organizado/Muerte_h1.mp4";
 import Lottie from 'react-lottie';
 import conducir from "../assets/conducir.json";
 import radio from "../assets/radio.json";

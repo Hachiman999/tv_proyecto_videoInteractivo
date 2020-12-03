@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { AiOutlinePlayCircle } from "react-icons/ai";
-//import ejem1 from "../assets/ejem1.gif";
-//import ejem2 from "../assets/ejem2.gif";
 import ejem3 from "../assets/ejem3.mp4";
 import ejem4 from "../assets/ejem4.mp4";
 import './styles.css';
